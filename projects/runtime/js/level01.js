@@ -43,6 +43,9 @@ var level01 = function (window) {
         }
 
         createSawBlade(400, groundY);
+        createSawBlade(700, 275);
+        createSawBlade(900, 355);
+
 
     };
 };
