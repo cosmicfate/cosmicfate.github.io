@@ -55,11 +55,12 @@ function wrapper(callback){
     callback(null, d.getTime());
 }, Math.random()*1000);
 
+}
+
 function sortTogether(names, times) {
     var tempList = [];
     for (var i = 0; i < names.length; i++) {
         tempList.push({'name': names[i], 'time': times[i]});
-    }
 }
     tempList.sort(function(a, b) {
         return ((a.time < b.time) ? -1 : ((a.time == b.time) ? 0 : 1));
