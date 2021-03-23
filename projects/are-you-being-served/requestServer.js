@@ -5,7 +5,7 @@ const args = process.argv.slice(2);
 var port = 8686;
 
 const server = http.createServer(function(req,res){
-var url = args[0] ? args[0] : "<a default url>"
+var url = args[0] ? args[0] :"http://www.google.com"
 
 
 
