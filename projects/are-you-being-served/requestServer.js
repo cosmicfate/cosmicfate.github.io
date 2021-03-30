@@ -24,5 +24,4 @@ request(url, function(err, response, body){
 })
 
 });
-
 server.listen(port);

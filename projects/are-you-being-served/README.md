@@ -162,11 +162,15 @@ After the header, write the command
 **Step 3: The Race Time**
 Finally, create a new Date object and use the `.getTime()` method of `Date` objects (refer to how you used `d.getTime()` earlier) to get the end time for the race. The last line you will write in your response will be the duration of the entire race, which you can get by subtracting your start time from your end time.
 
+
 **WARNING:** You will have to convert the time into a string. You can do this by either using the methog `.toString()` or by appending `"\n"` to the time using the concatenation operator.
 
 **HINTS:** 
 1) You get the end time in step 3, but you created the start time a bit earlier. Check for it and you should find it.
 2) Don't forget that you have to actually `end()` your message!
+=======
+**HINT:** You get the end time in step 3, but you created the start time a bit earlier. Check for it and you should find it.
+
 
 ### TODO 10: Test Your Race Server
 You can test your race server the same way you tested your request server. However, if you want to get the results of multiple requests a bit faster, you can do so by using cURL. You will need to open up a separate terminal from the one that you are running your server in and simply type `curl localhost:8686` (assuming you didn't change the port number). 
@@ -182,9 +186,14 @@ Do you notice anything different about the results now? How about the time it ta
 Change your `wrapper()` function so that instead of calling `setTimeout()`, it executes a `for` loop a random number of times before calling `callback()`. To really see the effects, a double for loop might be preferable. For instance:
 
 ```js
+
 var rand = Math.random();
 for (var i = 0; i < 1000; i++){
-    for (var j = 0; j <  rand * 1000000; j++){
+    for (var j = 0; j <  rand * 1000000; j++) }
+
+for (var i = 0; i < 1000; i++){
+    for (var j = 0; j < Math.random() * 1000000000; j++){
+
         // do some random math
     }
 }
