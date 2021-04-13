@@ -40,8 +40,9 @@ let startTime = d.getTime();
                 }
                 let dt  = new Date();
                 let endTime = dt.getTime();
-                let raceTime = enditme - startTime;
-                res.write(raceTime);
+                let raceTime = endTime - startTime;
+                res.write(raceTime.toString());
+                res.end();
         }
     );
     
