@@ -2,6 +2,7 @@ var resources = require('./../../resources/model');
 var Gpio = require('onoff').Gpio;
 
 
+
 function connectHardware(){
     new Gpio(device.gpio, 'in', 'both')
     sensor.watch(function(err,value){
@@ -25,5 +26,8 @@ exports.stop = function(){
 
 
 var sensor = new Gpio;
+
+var sensor;
+
 var device = resources.pi.sensors.pir;
 

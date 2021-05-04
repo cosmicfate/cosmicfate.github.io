@@ -17,7 +17,11 @@ set up routes for a server that handles multiple devices attached to a Pi
 * Enter the command `git clone https://github.com/operationspark/first-slice-of-pi` to add the base files for this project to your projects directory
 * Enter the command `cd first-slice-of-pi` to enter the new project's directory
 * Enter the command `rm -rf .git .gitignore` so you don't accidentally add the git management files to your own repository when you commit later
+
 * Run the command `npm install onoff node-dht-sensor express cors epoll` to install the libraries we will be using during this project
+=======
+* Run the command `npm install -g express cors` to install the libraries we will be using during this project
+
 
 ## Lesson Steps
 This project is the first of several that will work together to bake a fully-fledged Raspberry Pi system. There will be a lot of pieces all working together, so while you're working, do your best to keep track of how everything interconnects. It might seem daunting at first, with a total of eight files and several folders organizing those files, but learning how each piece relates to one another now will make the next few projects much simpler.
@@ -206,4 +210,7 @@ to just before the call to process.exit().
 
 That's it! You've set up a server that provides an interface to multiple devices on your Pi!
 
+
 Just as a reminder, you use the command `node wot-server.js` if you want to test your code. Again, this will only work properly if you are testing it on your Pi.
+=======
+

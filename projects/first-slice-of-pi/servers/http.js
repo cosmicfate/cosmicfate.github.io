@@ -1,6 +1,7 @@
 var express = require('express'),
 	cors = require('cors');
 
+
 	var app = express();
 	var sensorRoutes = require('./../routes/sensors');
 	var actuatorRoutes = require('./../routes/actuators');
@@ -18,6 +19,7 @@ var express = require('express'),
 	app.get("/pi", function(req,res){
 		res.send("Accessing the top level gateway")
 	});
+
 	
 
 module.exports = app;

@@ -185,7 +185,7 @@
 
       // TODO 3: Regular Polling
 
-      function doPoll() {
+      function doPoll(setTimeout) {
         $.getJSON("https://3fb5b491cc69.ngrok.io/pi/sensors/dht/temperature", function (result) {
           addDataPoint(result, regData, regChart);
           updateRegRecords(result.value);
