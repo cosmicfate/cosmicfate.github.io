@@ -4,11 +4,11 @@ var express = require('express'),
 
 
 	router.route('/').get(function (req, res, next) {
-		res.send(resources.pi.sensors);
+		res.send(resources.pi.actuators);
 	});
 	
 	router.route('/leds').get(function(req,res, next){
-		res.send(resources.pi.leds)
+		res.send(resources.pi.actuators.leds)
 	});
 
 	router.route('/leds/:id').get(function (req, res, next) {
