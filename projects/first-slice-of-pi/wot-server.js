@@ -3,6 +3,7 @@ var httpServer = require('./servers/http'),
 
 
 var pirPlugin = require('./plugins/internal/pirPlugin');
+var dhtPlugin = reuqire('./plugins/internal/dhtPlugin');
 
 pirPlugin.start({});
 dhtPlugin.start({'frequency': 2000});

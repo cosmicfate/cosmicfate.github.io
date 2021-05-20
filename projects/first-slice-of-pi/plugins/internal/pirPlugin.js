@@ -1,10 +1,13 @@
 var resources = require('./../../resources/model');
 var Gpio = require('onoff').Gpio;
 
+var device = resources.pi.sensors.pir;
+
+var sensor;
 
 
 function connectHardware(){
-    new Gpio(device.gpio, 'in', 'both')
+   sensor = new Gpio(device.gpio, 'in', 'both')
     sensor.watch(function(err,value){
         if(err) {
             print("Uh Oh! There was an error!")
@@ -18,16 +21,13 @@ function connectHardware(){
 
 
 
-exports.start = function (params) {};
+exports.start = function (connectHardware) {};
 exports.stop = function(){
     sensor.unexport();
 };
     
 
 
-var sensor = new Gpio;
 
-var sensor;
 
-var device = resources.pi.sensors.pir;
 
