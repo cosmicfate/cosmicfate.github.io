@@ -39,6 +39,9 @@ var interval, sensor;
 var device = resources.pi.sensors.dht;
 var localParams = {'frequency': 2000};
 
+exports.start = start;
+exports.stop = stop; 
+
 
 
 
